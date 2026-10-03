@@ -12,17 +12,18 @@
       #boot-screen .boot-eagle{font-size:72px;animation:boot-float 1.3s ease-in-out infinite}
       #boot-screen b{font-family:Arial Black,Arial,sans-serif;font-size:22px}
       #boot-screen p{max-width:330px;margin:0;line-height:1.5}
-      #boot-retry{display:none;margin-top:10px;padding:13px 18px;border:3px solid #171313;background:#f5c842;color:#171313;font-weight:900;text-decoration:none;box-shadow:5px 5px 0 #171313}
+      #boot-retry,#boot-backup{display:none;margin-top:10px;padding:13px 18px;border:3px solid #171313;background:#f5c842;color:#171313;font-weight:900;text-decoration:none;box-shadow:5px 5px 0 #171313}
+      #boot-backup{background:#fff}
       @keyframes boot-float{50%{transform:translateY(-9px)}}
       @media(prefers-reduced-motion:reduce){#boot-screen .boot-eagle{animation:none}}
     </style>
-    <script type="module" crossorigin src="/tiran-gorevi-backup/assets/index-Dr_1ZvAQ.js"></script>
+    <script type="module" crossorigin src="/tiran-gorevi-backup/assets/index-CN1SpQgq.js"></script>
     <link rel="stylesheet" crossorigin href="/tiran-gorevi-backup/assets/index-DYT3k2cm.css">
   </head>
   <body>
-    <div id="root"><main id="boot-screen"><span class="boot-eagle">🦅</span><b>Tiran Görevi açılıyor…</b><p>Bağlantı yavaşsa rota cihazdaki son kayıtla açılacak.</p><a id="boot-retry" href="./">Tekrar yükle</a></main></div>
+    <div id="root"><main id="boot-screen"><span class="boot-eagle">🦅</span><b>Tiran Görevi açılıyor…</b><p>Bağlantı yavaşsa rota cihazdaki son kayıtla açılacak.</p><a id="boot-retry" href="./">Tekrar yükle</a><a id="boot-backup" href="https://enesl1sc-oss.github.io/tiran-gorevi-backup/">GitHub yedek rotasını aç</a></main></div>
     <script>
-      window.setTimeout(function(){var retry=document.getElementById('boot-retry');if(retry){retry.style.display='inline-block';retry.href=window.location.pathname+'?reload='+Date.now()}},7000)
+      window.setTimeout(function(){var retry=document.getElementById('boot-retry');var backup=document.getElementById('boot-backup');if(retry){retry.style.display='inline-block';retry.href=window.location.pathname+'?reload='+Date.now()}if(backup&&window.location.hostname.indexOf('github.io')===-1){backup.style.display='inline-block'}},7000)
     </script>
   </body>
 </html>
