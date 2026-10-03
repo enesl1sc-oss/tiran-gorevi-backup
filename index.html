@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e41e2b" />
+    <meta name="description" content="İki günlük oyunlaştırılmış Tiran gezi rehberi" />
+    <title>Tiran Görevi</title>
+    <style>
+      html,body,#root{margin:0;min-height:100%;background:#e41e2b}
+      #boot-screen{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;box-sizing:border-box;color:#fff;text-align:center;font-family:Arial,sans-serif}
+      #boot-screen .boot-eagle{font-size:72px;animation:boot-float 1.3s ease-in-out infinite}
+      #boot-screen b{font-family:Arial Black,Arial,sans-serif;font-size:22px}
+      #boot-screen p{max-width:330px;margin:0;line-height:1.5}
+      #boot-retry{display:none;margin-top:10px;padding:13px 18px;border:3px solid #171313;background:#f5c842;color:#171313;font-weight:900;text-decoration:none;box-shadow:5px 5px 0 #171313}
+      @keyframes boot-float{50%{transform:translateY(-9px)}}
+      @media(prefers-reduced-motion:reduce){#boot-screen .boot-eagle{animation:none}}
+    </style>
+    <script type="module" crossorigin src="/tiran-gorevi-backup/assets/index-Dr_1ZvAQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/tiran-gorevi-backup/assets/index-DYT3k2cm.css">
+  </head>
+  <body>
+    <div id="root"><main id="boot-screen"><span class="boot-eagle">🦅</span><b>Tiran Görevi açılıyor…</b><p>Bağlantı yavaşsa rota cihazdaki son kayıtla açılacak.</p><a id="boot-retry" href="./">Tekrar yükle</a></main></div>
+    <script>
+      window.setTimeout(function(){var retry=document.getElementById('boot-retry');if(retry){retry.style.display='inline-block';retry.href=window.location.pathname+'?reload='+Date.now()}},7000)
+    </script>
+  </body>
+</html>
